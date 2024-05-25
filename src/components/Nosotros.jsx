@@ -17,7 +17,7 @@ const Nosotros = () => {
   return (
     <div className='container'>
       <h1 className='main-title'>Hola mundo</h1>
-      <p>Este es el componente</p>
+      <p>Este es el componente nostros</p>
     </div>
   )
 }
