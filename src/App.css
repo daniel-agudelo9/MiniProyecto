@@ -46,6 +46,11 @@ body{
   z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
 }
 
+.navbar h1{
+  font-size: 2.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .logo {
   text-decoration: none;
   color: black;
@@ -67,12 +72,12 @@ body{
   color: black;
   font-size: 1.2rem;
   padding: 0.5rem;
-  border-radius: 10%;
+  border-radius: 5%;
   transition: background-color 0.3s ease-in-out;  
 }
 
 .menu-link:hover {
-  background-color: white;
+  background-color: #B5B5BA;
   color: black;
 }
 
@@ -201,6 +206,15 @@ body{
   transition: .2s;
 }
 
+.enviar{
+  background-color: #9999A1;
+  color: black;
+}
+
+.enviar:hover{
+  background-color: #B5B5BA;
+}
+
 .item-count button:hover, .agregar-al-carrito:hover, .enviar:hover {
   background-color: white;
   color: black;
@@ -211,6 +225,45 @@ body{
   height: auto;
   margin-top: 1rem;
   padding: 1rem;
+}
+
+.carrito{
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  margin: auto;
+  margin-top: -3rem;
+  width: 50%;
+  padding: 1rem;
+  color: black;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.finish{
+  padding: 1rem;
+  background-color: #3F6C51;
+  color: black;
+  border-radius: 5%;
+  margin-left: 1rem;
+  transition: all 0.3s linear;
+}
+
+.finish:hover{
+  background-color: #65A47E;
+  outline: 1px solid black;
+  color: white;
+}
+
+.empty{
+  background-color: #C1292E;
+  transition: all 0.3s linear;
+}
+
+.empty:hover{
+  background-color: #D8464B;
+  color: white;
 }
 
 .formulario {
@@ -233,4 +286,189 @@ body{
   outline: 2px solid var(--clr-main);
 }
 
+#more{
+  background-color: #3F6C51;
+  color: black;
+  transition: all 0.2s ease-in;
+  font-weight: 300;
+}
+
+#more:hover{
+  background-color: #65A47E;
+}
+
+#less{
+  background-color: #C1292E;
+  color: black;
+  transition: all 0.2s ease-in;
+  font-weight: 300;
+}
+
+#less:hover{
+  background-color: #D8464B;
+}
+
+#add{
+  background-color: #9999A1;
+  color: black;
+  transition: all 0.2s ease-in;
+  font-weight: 300;
+}
+
+#add:hover{
+  background-color: #B5B5BA;
+}
+
+/* Nosotros */
+
+.nosotros-container {
+  padding: 2rem;
+  background-color: white; /* Color de fondo del contenedor principal */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: left;
+  color: #333;
+}
+
+.nosotros-title {
+  font-size: 2.5rem;
+  color: var(--clr-main);
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.nosotros-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Cambios de color para los cuadros individuales dentro de la sección "Nosotros" */
+.intro,
+.creators,
+.mission,
+.vision,
+.values,
+.history {
+  background: #efdaf9; /* Color de fondo para los cuadros individuales */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Ajustes para el texto dentro de los cuadros */
+.intro p,
+.mission p,
+.vision p,
+.values p,
+.history p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.creators {
+  text-align: center;
+}
+
+.creators h2 {
+  font-size: 2rem;
+  color: var(--clr-main);
+  color: #333;
+}
+
+.creators-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.creator-card {
+  background: #efdaf9; /* Color de fondo para las tarjetas de los creadores */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 250px;
+  text-align: center;
+}
+
+.creator-image {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.creator-card h3 {
+  font-size: 1.5rem;
+  color: var(--clr-main);
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.creator-card p {
+  font-size: 1rem;
+  color: black;
+}
+
+.flex{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.formBuy{
+  width: 50%;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.formBuy form{
+  margin-top: 1rem;
+}
+
+.formBuy input{
+  margin: 0.5rem;
+}
+
+.send-container{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.formContact{
+  margin-top: -10rem;
+}
+
+
+@media (max-width: 600px) {
+  .nosotros-container {
+    padding: 1rem;
+  }
+
+  .nosotros-title {
+    font-size: 2rem;
+  }
+
+  .creators-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .creator-card {
+    max-width: 100%;
+  }
+}
 

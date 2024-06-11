@@ -14,6 +14,7 @@ const Checkout = () => {
     const{register,handleSubmit} = useForm();
 
     const comprar = (data) =>{
+        
         const pedido={
             cliente:data,
             productos:carrito,
@@ -39,19 +40,22 @@ const Checkout = () => {
 
 
   return (
-    <div className='container'>
-        <h1 className='main-title'>Finalizar compra</h1>
-        <form className='formulario' onSubmit={handleSubmit(comprar)}>
+    <div className='flex'>
+        <div className='formBuy flex-buy'>
+            <h1 className='main-title'>Finalizar compra</h1>
+            <form className='formulario' onSubmit={handleSubmit(comprar)}>
 
-            <input type="text" placeholder='Ingrese tu nombre'{...register("nombre")}/>
+                <input type="text" placeholder='Ingrese tu nombre'{...register("nombre")}/>
 
-            <input type="email" placeholder="Ingrese tu email"{...register("email")}/>
+                <input type="email" placeholder="Ingrese tu email"{...register("email")}/>
 
-            <input type="Telefono" placeholder="Ingrese tu telefono"{...register("telefono")}/>
-            
-            <button className="enviar" type="submit" >Comprar</button>
-        </form>
-
+                <input type="Telefono" placeholder="Ingrese tu telefono"{...register("telefono")}/>
+                
+                <div className='send-container'>
+                    <button className="enviar" type="submit" >Comprar</button>
+                </div>
+            </form>
+        </div>
     </div>
   )
 }

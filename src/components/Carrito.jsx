@@ -12,7 +12,7 @@ const Carrito = () => {
 
     
   return (
-    <div className='container'>
+    <div className='carrito'>
       <h1 className='main-title'>Carrito</h1>
       {
         carrito.map((prod)=>(
@@ -29,8 +29,10 @@ const Carrito = () => {
         carrito.length>0 &&
         <div>
             <h2>Precio total: {precioTotal()} $</h2>
-            <button onClick={hundleVaciar}>Vaciar</button>
-            <Link to ="/checkout">Finalizar compra</Link>
+            <div className='button-container'>
+              <button className='empty' onClick={hundleVaciar}>Vaciar</button>
+              <Link className='finish' to ="/checkout">Finalizar compra</Link>
+            </div>
         </div>
       }
       

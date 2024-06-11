@@ -6,7 +6,7 @@ import CartWidget from './CartWidget'
 function NavBar() {
   return (
     <nav className='navbar'>
-        <Link to="/" className='logo'><h1>DaniShop</h1></Link>
+        <Link to="/" className='logo'><h1>GlamourGear</h1></Link>
         <ul className='menu'>
             {/* <li><Link className='menu-link' to="/">Inicio</Link></li>
             <li><Link className='menu-link' to="/productos">Productos</Link></li> */}
