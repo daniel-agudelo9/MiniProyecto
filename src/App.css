@@ -125,7 +125,7 @@ body{
 
 .producto > img {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/2;
   object-fit: cover;
 }
 
@@ -159,10 +159,13 @@ body{
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
   padding: 1rem;
   width: 50%;
+  height: 90vh;
 }
 
 .producto-detalle img {
   min-width: 400px;
+  max-width: 400px;
+  max-height: 600px;
 }
 
 .producto-detalle-info h3 {
