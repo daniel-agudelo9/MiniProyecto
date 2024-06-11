@@ -6,8 +6,15 @@
 }
 
 :root {
-  --clr-main: #c56cee;
-  --clr-main-light: #efdaf9;
+  --clr-main: #9999A1;
+  --clr-main-light: #3C3744;
+}
+
+#root{
+  width: 100%;
+}
+
+body{
 }
 
 .container {
@@ -30,17 +37,21 @@
   position: fixed; /* Fijar la barra en la parte superior */
   top: 0; /* Asegurarse de que esté en la parte superior */
   left: 0; /* Asegurarse de que comience desde la izquierda */
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--clr-main);
-  border-bottom: 3px solid black;
+  border-bottom: 1px solid black;
   z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
 }
 
 .logo {
   text-decoration: none;
+  color: black;
+}
+
+.logo:hover {
   color: black;
 }
 
@@ -55,16 +66,20 @@
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 10%;
+  transition: background-color 0.3s ease-in-out;  
 }
 
 .menu-link:hover {
-  text-decoration: underline;
+  background-color: white;
+  color: black;
 }
 
 .productos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribuye los elementos uniformemente */
+  justify-content: center; /* Distribuye los elementos uniformemente */
   align-items: flex-start; /* Alinea los elementos al principio verticalmente */
   gap: 2rem;
   padding: 2rem;
@@ -83,14 +98,24 @@
   flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
+  transition: all 0.2s linear;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  max-width: 200px;
+}
+
+.producto:hover{
+  transform: scale(1.05);
 }
 
 .producto > div {
   padding: 1rem;
   background-color: var(--clr-main-light);
+  color: white;
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  min-height: 10.5rem;
+  max-height: 10.5rem;
 }
 
 .producto > img {
@@ -99,14 +124,21 @@
   object-fit: cover;
 }
 
+.ver-mas-container{
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .producto .ver-mas {
   text-decoration: none;
-  background-color: var(--clr-main);
+  background-color: #C1292E;
   color: white;
   padding: .5rem;
   width: max-content;
   border-radius: .5rem;
-  transition: .2s;
+  transition: .2s;  
 }
 
 .producto .ver-mas:hover {
@@ -119,10 +151,13 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  padding: 1rem;
+  width: 50%;
 }
 
 .producto-detalle img {
-  width: 100%;
+  min-width: 400px;
 }
 
 .producto-detalle-info h3 {
